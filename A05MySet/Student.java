@@ -2,7 +2,7 @@ package A05MySet;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student> {
     String name;
     int age;
 
@@ -49,5 +49,11 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        //按照年龄排序
+        return this.getAge() - o.getAge();
     }
 }
