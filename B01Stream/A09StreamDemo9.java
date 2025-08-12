@@ -17,7 +17,8 @@ public class A09StreamDemo9 {
         Object[] array = list.stream().toArray();
         System.out.println(Arrays.toString(array));
 
-        list.stream().toArray();
+        String[] array1 = list.stream().toArray(value -> new String[value]);
+        System.out.println(Arrays.toString(array1));
 
 
     }
